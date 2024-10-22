@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Oliver Yang" />
+    
+        <meta name="description" content="Oliver Yang's blog, which cover's Linux OS，kernel, storage, cloud and his book reading notes." />
+    
+    <title>Memory Dump In Cloud | Oliver Yang</title>
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAAAAAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAD/APr59wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIiIiIiIiAAAiIiIiIiIAACIiIiIiIgERERERERIiAREREREREiIBERERERESIgERIiIiERIiAREiIiIREiIBESIhERESIgERIiERERIiAREiIiIiIiIBESIiIiIiIgERIiIiIiIiAREREREREAABEREREREQAAERERERERAADgAQAA4AEAAOABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAAEAAAABAAAAAQAAAA8AAAAPAAAADwAA" rel="icon" type="image/x-icon" />
+    <link href="/feed/" rel="alternate" title="Oliver Yang" type="application/atom+xml" />
+
+    <link rel="stylesheet" href="/media/css/code.css">
+    <link rel="canonical" href="https://www.oliveryang.net/" />
+    <script src="/media/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    <link href='/media/webfonts/ss-social.css' rel='stylesheet'>
+    <link href='/media/webfonts/ss-standard.css' rel='stylesheet'>
+    <link href="/media/css/screen.css" rel="stylesheet">
+
+    <script type="text/javascript" src="/media/js/jquery-1.7.1.min.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="main" role="main">
+        <header>
+        <div class="buttons">
+          <a href="/" class="ss-icon" title="Go to homepage">home</a>
+          <a href="/categories" class="ss-icon" title="Category" >list</a>
+          <a href="/tags" class="ss-icon" title="Tags" >tags</a>
+          <a href="/guestbook" class="ss-icon" title="Guest Book" >talk</a>
+          <a href="/about" class="ss-icon" title="About" >user</a>
+          <a href="/links" class="ss-icon" title="Link" >link</a>
+          <a href="/feed" class="ss-icon" title="Subscribe by RSS" >rss</a>
+        </div>
+        <h1>Memory Dump In Cloud</h1>
+        </header>
+        <hr>
+        <article class="content">
+        <section class="post">
+<ul class="listing">
+
+  
+  
+    
+    <li class="listing-seperator">2018</li>
+  
+  <li class="listing-item">
+    <time datetime="2018-03-04">2018-03-04</time>
+    <a href="/2018/03/linux-CPI-flamegraph/" title="Linux CPI FlameGraph">Linux CPI FlameGraph</a>
+  </li>
+
+  
+  
+  <li class="listing-item">
+    <time datetime="2018-01-15">2018-01-15</time>
+    <a href="/2018/01/cache-false-sharing-debug/" title="Cache False Sharing Debug">Cache False Sharing Debug</a>
+  </li>
+
+  
+  
+    
+    <li class="listing-seperator">2017</li>
+  
+  <li class="listing-item">
+    <time datetime="2017-12-06">2017-12-06</time>
+    <a href="/2017/12/linux-high-loadavg-analysis-1/" title="Linux High Loadavg Analysis - 1">Linux High Loadavg Analysis - 1</a>
+  </li>
+
+  
+  
+  <li class="listing-item">
+    <time datetime="2017-06-11">2017-06-11</time>
+    <a href="/2017/06/linux-memroy-pressure/" title="Linux Memory Pressure - 1">Linux Memory Pressure - 1</a>
+  </li>
+
+  
+  
+  <li class="listing-item">
+    <time datetime="2017-04-24">2017-04-24</time>
+    <a href="/2017/04/linux-perf-sched/" title="Linux perf sched Summary">Linux perf sched Summary</a>
+  </li>
+
+  
+  
+  <li class="listing-item">
+    <time datetime="2017-03-20">2017-03-20</time>
+    <a href="/2017/03/linux-kernel-memory-hacking/" title="Linux Kernel Memory Hacking">Linux Kernel Memory Hacking</a>
+  </li>
+
+  
+  
+  <li class="listing-item">
+    <time datetime="2017-03-11">2017-03-11</time>
+    <a href="/2017/03/linux-printk-flooding/" title="Linux Printk Flooding">Linux Printk Flooding</a>
+  </li>
+
+  
+  
+  <li class="listing-item">
+    <time datetime="2017-01-01">2017-01-01</time>
+    <a href="/2017/01/linux-block-driver-basic-7/" title="Linux Block Driver - 7">Linux Block Driver - 7</a>
+  </li>
+
+  
+  
+    
+    <li class="listing-seperator">2016</li>
+  
+  <li class="listing-item">
+    <time datetime="2016-11-12">2016-11-12</time>
+    <a href="/2016/11/linux-block-driver-basic-6/" title="Linux Block Driver - 6">Linux Block Driver - 6</a>
+  </li>
+
+  
+  
+  <li class="listing-item">
+    <time datetime="2016-10-27">2016-10-27</time>
+    <a href="/2016/10/linux-block-driver-basic-5/" title="Linux Block Driver - 5">Linux Block Driver - 5</a>
+  </li>
+
+  
+  
+  <li class="listing-item">
+    <time datetime="2016-09-21">2016-09-21</time>
+    <a href="/2016/09/7-habits-2/" title="7 Habits Notes - Paradigms & Principles">7 Habits Notes - Paradigms & Principles</a>
+  </li>
+
+  
+  
+  <li class="listing-item">
+    <time datetime="2016-08-30">2016-08-30</time>
+    <a href="/2016/08/linux-block-driver-basic-4/" title="Linux Block Driver - 4">Linux Block Driver - 4</a>
+  </li>
+
+  
+  
+  <li class="listing-item">
+    <time datetime="2016-08-29">2016-08-29</time>
+    <a href="/2016/08/7-habits-1/" title="7 Habits Notes - Foreword">7 Habits Notes - Foreword</a>
+  </li>
+
+  
+  
+  <li class="listing-item">
+    <time datetime="2016-08-27">2016-08-27</time>
+    <a href="/2016/08/opensolaris-my-patches/" title="OpenSolaris - my patches">OpenSolaris - my patches</a>
+  </li>
+
+  
+  
+  <li class="listing-item">
+    <time datetime="2016-08-26">2016-08-26</time>
+    <a href="/2016/08/agile-notes-1/" title="Agile Notes - 1">Agile Notes - 1</a>
+  </li>
+
+  
+  
+  <li class="listing-item">
+    <time datetime="2016-08-16">2016-08-16</time>
+    <a href="/2016/08/linux-block-driver-basic-3/" title="Linux Block Driver - 3">Linux Block Driver - 3</a>
+  </li>
+
+  
+  
+  <li class="listing-item">
+    <time datetime="2016-07-10">2016-07-10</time>
+    <a href="/2016/07/linux-block-driver-basic-2/" title="Linux Block Driver - 2">Linux Block Driver - 2</a>
+  </li>
+
+  
+  
+  <li class="listing-item">
+    <time datetime="2016-07-09">2016-07-09</time>
+    <a href="/2016/07/linux-perf-tools-tips/" title="Linux Perf Tools Tips">Linux Perf Tools Tips</a>
+  </li>
+
+</ul>
+
+<div id="post-pagination" class="paginator">
+
+  
+    <span class="previous disabled"><Prev</span>
+  
+
+      
+      <span class="current-page">1</span>
+      
+
+    
+      
+      <a href="/page2">2</a>
+      
+    
+      
+      <a href="/page3">3</a>
+      
+    
+
+  
+    <a class="next" href="/page2">Next></a>
+  
+  (Total posts: 51)
+</div>
+
+
+</section>
+
+
+
+        </article>
+      </div>
+
+    <footer>
+		<p><small>Powered by <a href="https://github.com/mojombo/jekyll">Jekyll</a> and <a href="https://github.com">Github</a> | Copyright 2014 - 2024 by <a href="https://www.oliveryang.net/">Oliver Yang</a> | <span class="label label-info">2024-09-17 12:28:00 UTC</span></small></p>
+    </footer>
+
+    </div>
+
+	<!--CNZZ统计代码-->
+	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1257194565'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1257194565%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+
+	<!--Baidu SEO优化，站长推送-->
+    <script>
+        (function(){
+            var bp = document.createElement('script');
+            bp.src = '//push.zhanzhang.baidu.com/push.js';
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+
+  </body>
+</html>
